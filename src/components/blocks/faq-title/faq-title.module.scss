@@ -1,0 +1,36 @@
+.container {
+  padding: 0 $bg-grid-size-var;
+  height: $bg-grid-size-var;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.icon {
+  width: 15px;
+  height: 15px;
+  color: $color-6;
+}
+.title {
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (min-width: $breakpoint-md) {
+  .container {
+    margin: 0 auto;
+    padding: 0;
+    max-width: $bg-grid-size-tablet * 3;
+  }
+  .icon {
+    width: 30rem;
+    height: 30rem;
+  }
+  .title {
+    font-size: 18rem;
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .container {
+    max-width: $bg-grid-size-desktop * 3;
+  }
+}

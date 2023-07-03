@@ -1,0 +1,164 @@
+.section {
+  height: $bg-grid-size-mobile * 17;
+  position: relative;
+  padding: calc($bg-grid-size-var * 2) 0;
+}
+.container {
+  height: 100%;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+.wrapper {
+  height: 100%;
+
+  position: relative;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 127.5%;
+  /* or 20px */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+}
+.title {
+  margin-bottom: 75px;
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 85%;
+  /* or 88px */
+
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+  &--accent {
+    color: $color-3;
+  }
+}
+.content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $bg-grid-size-mobile * 3;
+  padding: 45px 25px 70px;
+  // background: $color-2;
+  // background-image: url('/img/bg-vintage-transparent.webp');
+  // background-size: auto;
+  position: relative;
+}
+.bg-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.icon-cross {
+  margin: 0 auto 40px;
+  width: 27px;
+  height: 27px;
+
+  display: block;
+
+  color: $color-6;
+}
+
+.paragraph {
+  margin: 0 auto;
+  max-width: 200px;
+  font-size: 14px;
+  line-height: 127.5%;
+  /* or 20px */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  pointer-events: none;
+}
+@media (min-width: $breakpoint-md) {
+  .section {
+    height: $bg-grid-size-tablet * 13;
+  }
+  .container {
+    padding: 0;
+  }
+  .subtitle {
+    margin-bottom: 30rem;
+    font-size: 16rem;
+  }
+  .title {
+    font-size: 60rem;
+  }
+  .content {
+    max-width: 385rem;
+    padding: 85rem 80rem;
+  }
+  .icon-cross {
+    margin-bottom: 40rem;
+  }
+  .paragraph {
+    max-width: 220rem;
+
+    font-size: 16rem;
+    &:not(:last-child) {
+      margin-bottom: 30rem;
+    }
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .section {
+    height: $bg-grid-size-desktop * 10;
+  }
+  .container {
+    padding: 0 $bg-grid-size-desktop;
+  }
+  .header {
+    padding-top: 90rem;
+  }
+  .subtitle {
+    margin-bottom: 35rem;
+  }
+  .title {
+    font-size: 103rem;
+  }
+  .content {
+    width: $bg-grid-size-desktop * 3;
+    max-width: none;
+    padding: 45rem 80rem 125rem;
+
+    position: absolute;
+    top: 0;
+
+    right: 0;
+  }
+}

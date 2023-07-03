@@ -1,0 +1,76 @@
+.container {
+  padding-top: $bg-grid-size-mobile * 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  margin-top: -0.8em;
+  // margin-bottom: 0.8em;
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 27px;
+  line-height: 80%;
+  /* identical to box height, or 22px */
+
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.text {
+  margin-bottom: 0.9em;
+
+  min-height: $bg-grid-size-var;
+  // margin-bottom: 4.187vh;
+  font-size: 14px;
+  line-height: 133%;
+  /* or 19px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: $bg-grid-size-tablet * 2;
+  }
+  .title {
+    margin-top: 0;
+    margin-bottom: $bg-grid-size-tablet * 0.2;
+
+    font-size: 66rem;
+  }
+  .text {
+    min-height: auto;
+    margin-bottom: $bg-grid-size-tablet * 0.354;
+    font-size: 20rem;
+  }
+  .buttons-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .container {
+    padding-top: $bg-grid-size-desktop * 1.5;
+  }
+  .title {
+    margin-top: -0.5em;
+    margin-bottom: $bg-grid-size-desktop * 0.3;
+  }
+  .text {
+    margin-top: -0.5em;
+    margin-bottom: $bg-grid-size-desktop * 1.1;
+  }
+  .buttons-container {
+    max-width: $bg-grid-size-desktop * 5;
+    width: 100%;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,136 @@
+.bloody-button {
+  width: 100%;
+  height: $bg-grid-size-var;
+  padding: 10rem;
+  display: flex;
+  // background: $color-3;
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+}
+.size-3 {
+  width: calc($bg-grid-size-var * 3);
+  .bone {
+    width: 68rem;
+  }
+  .bone-1 {
+    top: -20rem;
+  }
+  .bg-lottie {
+    width: 114%;
+    top: -34%;
+    left: -0.25%;
+  }
+}
+.size-4 {
+  width: calc($bg-grid-size-var * 4);
+  .bone {
+    width: 90rem;
+  }
+  .bg {
+    width: 105.5%;
+    top: -21%;
+  }
+}
+.size-5 {
+  width: calc($bg-grid-size-var * 5);
+}
+.text-align-left-bottom {
+  align-items: flex-end;
+}
+.text-align-center {
+  align-items: center;
+  justify-content: center;
+}
+.text-align-left-center {
+  align-items: center;
+  justify-content: flex-start;
+}
+.text {
+  //   max-width: 110rem;
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 16rem;
+  line-height: 86%;
+  /* or 22px */
+
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  color: $color-1;
+}
+.bone {
+  width: 64rem;
+  position: absolute;
+}
+.bone-1 {
+  top: -28%;
+  right: 18%;
+}
+.bone-2 {
+  top: 50%;
+  right: 0;
+  transform: translate(40%, -50%) rotate(80deg);
+}
+// .bg {
+//   position: absolute;
+//   top: -35%;
+//   left: 0;
+//   width: 114%;
+//   z-index: -1;
+//   pointer-events: none;
+//   svg {
+//     width: 100%;
+//     height: auto;
+//     max-width: none;
+//     max-height: none;
+//   }
+// }
+.bg {
+  width: 113%;
+  position: absolute;
+  top: -28%;
+  left: 0;
+  max-width: none;
+  max-height: none;
+  z-index: -1;
+  pointer-events: none;
+  svg {
+    // filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .bloody-button {
+    // width: calc($bg-grid-size-var * 4);
+    padding: 20rem;
+  }
+  .text {
+    font-size: 26rem;
+  }
+  // .bone {
+  //   width: 90rem;
+  // }
+  // .bg {
+  //   width: 105.5%;
+  //   top: -21%;
+  // }
+}
+
+@media (min-width: $breakpoint-xl) {
+  // .bloody-button {
+  //   width: calc($bg-grid-size-var * 3);
+  // }
+
+  // .bone {
+  //   width: 68rem;
+  // }
+  // .bone-1 {
+  //   top: -20rem;
+  // }
+  // .bg-lottie {
+  //   width: 114%;
+  //   top: -34%;
+  //   left: -0.25%;
+  // }
+}

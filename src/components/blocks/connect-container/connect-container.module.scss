@@ -1,0 +1,36 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+}
+.container {
+  max-width: 61.866%;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+.bg {
+  img {
+    z-index: -2;
+  }
+}
+.frame {
+  img {
+    z-index: -1;
+  }
+}
+.grid {
+  z-index: -2 !important;
+}
+@media (min-width: $breakpoint-md) {
+  .container {
+    max-width: 66.796%;
+    padding: 0 8rem;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .container {
+    max-width: 33.281%;
+    padding: 0 12rem;
+  }
+}

@@ -1,0 +1,38 @@
+.button {
+  position: relative;
+  width: 100%;
+  height: $bg-grid-size-var;
+  overflow: visible;
+  z-index: 1;
+}
+.text {
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 86%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 104.615%;
+  pointer-events: none;
+  transform: translateY(-7%);
+  svg {
+    max-width: none;
+    max-height: none;
+  }
+}
+@media (min-width: $breakpoint-md) {
+  .text {
+    font-size: 26rem;
+  }
+}

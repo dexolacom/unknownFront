@@ -1,0 +1,24 @@
+.container {
+  padding-top: calc($bg-grid-size-var * 3.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $bg-grid-size-mobile * 0.8;
+}
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: calc($bg-grid-size-var * 3.17);
+
+    flex-direction: row;
+    gap: 35px;
+    justify-content: space-between;
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .container {
+    // padding-top: calc($bg-grid-size-var * 3.17);
+
+    gap: $bg-grid-size-desktop * 1.25;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,73 @@
+.container {
+  padding-top: $bg-grid-size-mobile * 3;
+}
+.title {
+  min-height: $bg-grid-size-mobile * 2;
+  padding-bottom: $bg-grid-size-mobile * 0.2;
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 27px;
+  line-height: 80%;
+  /* or 22px */
+
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.text {
+  min-height: $bg-grid-size-mobile;
+  margin-bottom: $bg-grid-size-mobile * 0.95;
+  font-size: 14px;
+  line-height: 133%;
+  /* or 19px */
+
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.button {
+  width: 100%;
+}
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: $bg-grid-size-tablet * 2;
+  }
+  .title {
+    margin: 0 auto;
+    min-height: $bg-grid-size-var;
+    max-width: 385rem;
+    padding-bottom: calc($bg-grid-size-var * 0.1);
+    font-size: 36rem;
+  }
+  .text {
+    min-height: $bg-grid-size-var;
+    margin: 0 auto calc($bg-grid-size-var * 0.8);
+    max-width: 310rem;
+    align-items: center;
+    font-size: 20rem;
+  }
+  .button {
+    max-width: 295rem;
+    margin: 0 auto;
+    display: block !important;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .container {
+    padding-top: $bg-grid-size-desktop;
+  }
+  .title {
+    min-height: $bg-grid-size-desktop * 2;
+    margin-top: -0.4em;
+    margin-bottom: 0.4em;
+    max-width: 515rem;
+    font-size: 59rem;
+  }
+  .text {
+    margin-bottom: $bg-grid-size-desktop * 0.59;
+    max-width: 510rem;
+  }
+}

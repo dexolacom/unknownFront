@@ -1,0 +1,10 @@
+$bg-grid-size-mobile: 100vw / 5;
+$bg-grid-size-tablet: 100vw / 6;
+$bg-grid-size-desktop: 100vw / 15;
+$bg-grid-size-var: var(--bg-grid-size, $bg-grid-size-mobile);
+
+$bg-grid-color: rgba($color-1, 0.1);
+$bg-grid-width: 1px;
+$bg-grid-border: $bg-grid-width solid $bg-grid-color;
+
+$transition: 0.3s ease-in-out;

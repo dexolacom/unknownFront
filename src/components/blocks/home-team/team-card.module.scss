@@ -1,0 +1,73 @@
+.card {
+  padding-top: 60rem;
+  width: 100%;
+  height: $bg-grid-size-mobile * 5.5;
+  background: $color-2;
+  position: relative;
+  @include grid-after-border;
+}
+.name {
+  margin-bottom: 10px;
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 23px;
+  line-height: 90%;
+  /* or 21px */
+
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+}
+.position {
+  font-size: 14px;
+  line-height: 112%;
+  /* identical to box height, or 16px */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+
+  opacity: 0.3;
+}
+.avatar {
+  width: 100%;
+  padding-top: 200.78%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: $breakpoint-md) {
+  .card {
+    height: $bg-grid-size-tablet * 3;
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .card {
+    padding-top: 55rem;
+    width: $bg-grid-size-desktop;
+    height: $bg-grid-size-desktop * 3;
+  }
+  .name {
+    font-size: 20rem;
+  }
+  .position {
+    font-size: 14rem;
+  }
+}
+@media (min-width: $breakpoint-xxl) {
+  .name {
+    font-size: 21rem;
+  }
+  .position {
+    font-size: 14rem;
+  }
+}

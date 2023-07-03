@@ -1,0 +1,115 @@
+.section {
+  // padding-top: ($bg-grid-size-mobile * 2);
+
+  position: relative;
+}
+
+.wrapper {
+  height: $bg-grid-size-mobile * 11;
+  padding-top: $bg-grid-size-mobile;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  @include grid-after-border;
+}
+
+.title {
+  // margin: 0 -40rem 70rem;
+  // padding: 0 40rem;
+  // height: $bg-grid-size-desktop;
+  margin: 0 auto;
+  max-width: 250px;
+  flex-direction: column;
+  align-items: stretch;
+
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 80%;
+  /* identical to box height, or 68px */
+
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  & > span {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.bg-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+.bg-section {
+  z-index: -1;
+}
+@media (min-width: $breakpoint-md) {
+  .section {
+    padding: 0;
+  }
+  .container {
+    padding: 0;
+  }
+  .wrapper {
+    height: $bg-grid-size-tablet * 11;
+
+    padding: ($bg-grid-size-tablet * 2) 0 ($bg-grid-size-tablet * 4);
+  }
+  .title {
+    max-width: 465rem;
+    font-size: 66rem;
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .section {
+    padding: ($bg-grid-size-desktop * 2) 0 ($bg-grid-size-desktop * 3);
+  }
+  .container {
+    padding: 0 $bg-grid-size-desktop;
+  }
+  .wrapper {
+    height: $bg-grid-size-desktop * 8;
+    padding: 0 40rem;
+  }
+  .title {
+    margin: 0 -40rem 70rem;
+    max-width: none;
+    padding: 0 40rem;
+    height: $bg-grid-size-desktop;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+
+    font-size: 85rem;
+
+    & > span {
+      width: auto;
+      display: inline;
+    }
+    &::after {
+      width: 100%;
+      border-bottom: $bg-grid-border;
+
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+    }
+  }
+}
+@media (min-width: $breakpoint-xxl) {
+  .wrapper {
+    height: $bg-grid-size-desktop * 7;
+  }
+}

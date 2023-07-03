@@ -1,0 +1,35 @@
+.d-min-md-max-xl {
+  display: none;
+}
+
+@media (min-width: $breakpoint-md) {
+  .d-max-md,
+  .d-min-md-max-xl,
+  .d-min-xl-max-md {
+    display: none;
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .d-max-xl {
+    display: none;
+  }
+  .d-min-xl-max-md {
+    display: inline;
+  }
+}
+@media (max-width: ($breakpoint-md - 1px)) {
+  .d-min-md {
+    display: none;
+  }
+}
+@media (max-width: ($breakpoint-xl - 1px)) {
+  .d-min-xl {
+    display: none;
+  }
+}
+
+@media (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+  .d-min-md-max-xl {
+    display: inline;
+  }
+}

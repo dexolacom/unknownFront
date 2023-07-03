@@ -1,0 +1,86 @@
+
+.header {
+  height: $bg-grid-size-mobile * 7;
+  padding: 100px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.icon {
+  margin-bottom: 65px;
+  width: 25px;
+}
+.title {
+  margin-bottom: 60px;
+  font-family: 'Right Grotesk';
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 90%;
+  /* or 120px */
+
+  text-align: center;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+.subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 112%;
+  /* identical to box height, or 27px */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  /* 3 */
+
+  color: $color-3;
+}
+.bg-header {
+  z-index: -1;
+}
+
+@media (min-width: $breakpoint-md) {
+  .header {
+    height: $bg-grid-size-tablet * 6;
+  }
+  .icon {
+    margin-bottom: 120rem;
+    width: 42rem;
+  }
+  .title {
+    margin-bottom: 110rem;
+
+    font-size: 133rem;
+  }
+  .subtitle {
+    font-size: 24rem;
+  }
+  .list {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, $bg-grid-size-tablet * 4);
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .header {
+    width: $bg-grid-size-desktop * 7;
+    height: $bg-grid-size-desktop * 8;
+  }
+
+  .title {
+    margin-bottom: 135rem;
+  }
+  .list {
+    width: $bg-grid-size-desktop * 8;
+    grid-template-rows: repeat(2, $bg-grid-size-desktop * 4);
+  }
+}

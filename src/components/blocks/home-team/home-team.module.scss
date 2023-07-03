@@ -1,0 +1,143 @@
+.section {
+  height: $bg-grid-size-mobile * 11;
+  position: relative;
+  padding-top: ($bg-grid-size-mobile * 2);
+}
+.container {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  margin: 0 auto 30px;
+  width: max-content;
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 90%;
+  /* identical to box height, or 89px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  /* 3 */
+
+  color: $color-3;
+  sup {
+    font-size: 0.3333em;
+    transform: translate(0.1em, -0.65em);
+  }
+}
+.subtitle {
+  margin: 0 auto;
+  max-width: 230px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 112%;
+  /* or 18px */
+
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+
+  text-shadow: 0px 3px 20px #000000;
+}
+.swiper-wrap {
+  width: 100%;
+  height: min-content;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include bg-grid;
+  }
+}
+.bone {
+  height: 110%;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+  position: absolute;
+}
+.paper {
+  z-index: -1;
+}
+@media (min-width: $breakpoint-md) {
+  .section {
+    height: $bg-grid-size-tablet * 10;
+    padding-top: 305rem;
+    padding-bottom: $bg-grid-size-tablet * 2;
+  }
+  .container {
+    padding: 0 $bg-grid-size-tablet;
+  }
+  .title {
+    font-size: 66rem;
+  }
+  .subtitle {
+    max-width: 325rem;
+    font-size: 16rem;
+  }
+
+  .bone {
+    width: 87.63%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .section {
+    height: $bg-grid-size-desktop * 9;
+    padding: $bg-grid-size-desktop * 2 0;
+  }
+  .container {
+    padding: 0 $bg-grid-size-desktop;
+  }
+  .title {
+    margin-bottom: 50rem;
+    font-size: 99rem;
+  }
+  .subtitle {
+    max-width: 665rem;
+  }
+  .swiper-wrap {
+    width: $bg-grid-size-desktop * 13;
+    height: $bg-grid-size-desktop * 3;
+    left: $bg-grid-size-desktop;
+    bottom: 0;
+    overflow: hidden;
+  }
+  .bone {
+    height: 100%;
+    width: 32.135%;
+    left: auto;
+    right: $bg-grid-size-desktop * 1.5;
+    transform: none;
+  }
+}

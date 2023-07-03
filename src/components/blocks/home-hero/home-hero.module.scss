@@ -1,0 +1,161 @@
+.container {
+  height: ($bg-grid-size-mobile * 11);
+  padding: $bg-grid-size-var $bg-grid-size-var 0;
+  position: relative;
+}
+.title {
+  margin-bottom: 32px;
+
+  position: relative;
+  z-index: 1;
+
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 80%;
+  /* or 106px */
+
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+  .placeholder {
+    color: transparent;
+    &::before {
+      display: inline-block;
+      content: '░';
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      font-size: 0.6em;
+      color: $color-1;
+    }
+  }
+}
+.description {
+  max-width: calc($bg-grid-size-var * 3);
+  margin-bottom: 55px;
+  margin-right: -40px;
+  font-size: 14px;
+  line-height: 133%;
+  /* or 21px */
+
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+  position: relative;
+  z-index: 2;
+}
+.bg-bone {
+  width: 100vw;
+  position: absolute;
+  top: $bg-grid-size-mobile * 5;
+  right: 0;
+  z-index: 1;
+  &::before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: (529 / 563) * 100%;
+  }
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: $color-2;
+  // background: $color-2 url('/img/bg-vintage-transparent.webp');
+}
+.bloody-button {
+  width: 100%;
+  position: absolute;
+  top: calc($bg-grid-size-var * 7);
+}
+.socials {
+  width: min-content;
+  height: min-content;
+  position: fixed;
+  top: $bg-grid-size-var;
+  right: 0;
+  z-index: 10;
+}
+@media (min-width: $breakpoint-md) {
+  .container {
+    padding-top: 0;
+    height: calc($bg-grid-size-var * 10);
+  }
+  .title {
+    padding-top: 0.4em;
+    font-size: 89rem;
+  }
+  .container-description {
+    margin-top: -265rem;
+    position: relative;
+  }
+  .description {
+    max-width: calc($bg-grid-size-var * 4);
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 127rem;
+    z-index: 2;
+    font-size: 16rem;
+  }
+  .socials {
+  }
+  .bg-bone {
+    position: relative;
+    top: auto;
+    right: $bg-grid-size-var;
+    // width: 769rem;
+    // aspect-ratio: 769 / 749;
+    &::before {
+      padding-top: (1122 / 1153) * 100%;
+    }
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .container {
+    height: ($bg-grid-size-desktop * 9);
+    position: relative;
+  }
+  .title {
+    margin-bottom: 50rem;
+    padding-top: calc(133rem * 0.1);
+
+    font-size: 133rem;
+    position: relative;
+    z-index: 2;
+  }
+  .container-description {
+    position: static;
+    margin-top: 0;
+  }
+  .description {
+    position: static;
+  }
+
+  .bg-bone {
+    margin: 0;
+    width: $bg-grid-size-desktop * 11.65;
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    &::before {
+      padding-top: (2440 / 2994) * 100%;
+    }
+  }
+  .bloody-button {
+    top: calc($bg-grid-size-var * 6);
+  }
+}

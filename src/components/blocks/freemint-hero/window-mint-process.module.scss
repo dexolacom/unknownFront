@@ -1,0 +1,125 @@
+.window-mint-process {
+  height: 100%;
+  padding: 25px 20px 65px;
+  //   min-height: calc($bg-grid-size-var * 8);
+  background: rgba(0, 0, 0, 0.33);
+  backdrop-filter: blur(33px);
+
+  border-radius: 4px;
+}
+.header {
+  margin-bottom: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 133%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.header-title {
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 80%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  /* 3 */
+
+  color: $color-3;
+}
+.title {
+  margin-bottom: 40px;
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 80%;
+  /* or 36px */
+
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.table {
+  margin-bottom: 50px;
+  width: 100%;
+  th {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 133%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  td {
+    font-size: 14px;
+    line-height: 133%;
+    text-align: right;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+  tr {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  tr:not(:last-child) {
+    border-bottom: 1px solid rgba(#d9d9d9, 0.2);
+  }
+}
+.button {
+  width: min-content;
+  margin: 0 auto;
+}
+@media (min-width: $breakpoint-md) {
+  .window-mint-process {
+    padding: 35rem 35rem 40rem 30rem;
+  }
+  .header {
+    margin-bottom: 60rem;
+  }
+  .header-text {
+    font-size: 20rem;
+  }
+  .header-title {
+    font-size: 60rem;
+  }
+  .title {
+    margin-bottom: 75rem;
+    font-size: 60rem;
+  }
+  .table {
+    margin-bottom: 60rem;
+    tr {
+      padding: 15rem 0;
+    }
+    th {
+      font-size: 17rem;
+    }
+    td {
+      font-size: 17rem;
+    }
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .window-mint-process {
+    padding: 35rem;
+  }
+  .header {
+    margin-bottom: 30rem;
+  }
+  .header-title {
+    font-size: 70rem;
+  }
+  .title {
+    margin-bottom: 50rem;
+    font-size: 70rem;
+  }
+  .table {
+    margin-bottom: 55rem;
+  }
+}

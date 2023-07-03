@@ -1,0 +1,30 @@
+@mixin grid-after-border {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border: $bg-grid-border;
+    border-right: transparent;
+    border-bottom: transparent;
+    pointer-events: none;
+  }
+}
+
+@mixin bg-grid {
+  background-size: $bg-grid-size-var $bg-grid-size-var;
+  background-repeat: repeat;
+  background-image: linear-gradient(
+      $bg-grid-color $bg-grid-width,
+      transparent $bg-grid-width
+    ),
+    linear-gradient(
+      90deg,
+      $bg-grid-color $bg-grid-width,
+      transparent $bg-grid-width
+    );
+}

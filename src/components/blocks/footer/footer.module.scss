@@ -1,0 +1,300 @@
+.footer {
+  position: relative;
+}
+
+.text-container {
+  height: $bg-grid-size-mobile * 9;
+  position: relative;
+  background: $color-2;
+  background-image: url('/img/bg-vintage-transparent.webp');
+  background-size: auto;
+}
+
+.text {
+  width: min-content;
+  height: 100%;
+
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 72%;
+  /* or 85px */
+
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+
+  /* 3 */
+
+  color: $color-3;
+}
+.bone {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  pointer-events: none;
+  &::before {
+    content: '';
+    display: block;
+    padding-top: (584 / 376) * 100%;
+  }
+}
+.links-container {
+  padding-top: $bg-grid-size-mobile * 8;
+  position: relative;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: $color-2;
+  background-image: url('/img/bg-vintage-transparent.webp');
+  background-size: auto;
+}
+
+.button {
+  position: absolute;
+}
+.button-opensea {
+  position: absolute !important;
+  top: $bg-grid-size-mobile;
+  left: $bg-grid-size-mobile * 2;
+}
+.button-discord {
+  top: $bg-grid-size-mobile * 6;
+  left: $bg-grid-size-mobile;
+  background: $color-4;
+  color: $color-2;
+}
+.button-law {
+  top: $bg-grid-size-mobile * 5;
+  left: $bg-grid-size-mobile * 3;
+}
+.button-twitter {
+  top: $bg-grid-size-mobile;
+  left: $bg-grid-size-mobile;
+}
+.button-book {
+  top: $bg-grid-size-mobile * 5;
+  left: $bg-grid-size-mobile * 2;
+}
+.button-youniq {
+  top: $bg-grid-size-mobile * 3;
+
+  left: 0;
+}
+.link {
+  font-size: 12px;
+  width: $bg-grid-size-var;
+  height: $bg-grid-size-var;
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  text-align: center;
+
+  span {
+    max-width: 70rem;
+  }
+}
+.link-privacy {
+  left: $bg-grid-size-mobile * 2;
+  top: $bg-grid-size-mobile * 6;
+}
+.link-terms {
+  left: $bg-grid-size-mobile * 3;
+  top: $bg-grid-size-mobile * 6;
+}
+.copyrights {
+  width: 100%;
+
+  p {
+    width: 100%;
+    height: $bg-grid-size-var;
+
+    border-bottom: $bg-grid-border;
+    background: $color-9;
+    display: grid;
+    place-items: center;
+    font-size: 12px;
+    line-height: 133%;
+    /* or 21px */
+
+    text-align: center;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    /* 1 */
+
+    color: $color-1;
+    a {
+      font-size: inherit;
+    }
+  }
+}
+@media (min-width: $breakpoint-md) {
+  .text-container {
+    height: $bg-grid-size-tablet * 7.5;
+  }
+  .text {
+    font-size: 118.25rem;
+  }
+  .bone {
+    width: 93.88%;
+    &::before {
+      padding-top: (1072 / 721) * 100%;
+    }
+  }
+  .links-container {
+    padding-top: $bg-grid-size-tablet * 7.5;
+  }
+
+  .button-twitter {
+    top: $bg-grid-size-tablet * 0.5;
+    left: $bg-grid-size-tablet;
+  }
+  .button-opensea {
+    top: $bg-grid-size-tablet * 0.5;
+    left: $bg-grid-size-tablet * 3;
+  }
+  .button-youniq {
+    top: $bg-grid-size-tablet * 2.5;
+    left: $bg-grid-size-tablet;
+    img {
+      width: 130rem;
+    }
+  }
+  .button-law {
+    top: $bg-grid-size-tablet * 3.5;
+    left: $bg-grid-size-tablet * 4;
+  }
+  .button-book {
+    top: $bg-grid-size-tablet * 4.5;
+    left: $bg-grid-size-tablet * 3;
+  }
+  .button-discord {
+    top: $bg-grid-size-tablet * 5.5;
+    left: $bg-grid-size-tablet * 2;
+  }
+  .link {
+    font-size: 16rem;
+  }
+  .link-privacy {
+    top: $bg-grid-size-tablet * 5.5;
+    left: $bg-grid-size-tablet * 3;
+  }
+  .link-terms {
+    top: $bg-grid-size-tablet * 5.5;
+    left: $bg-grid-size-tablet * 4;
+  }
+  .copyrights {
+    display: flex;
+    p {
+      font-size: 16rem;
+    }
+    p:nth-child(1) {
+      position: relative;
+      &::after {
+        display: block;
+        content: '';
+        width: 1px;
+        height: 100%;
+        background: $bg-grid-color;
+        position: absolute;
+        top: 0;
+        right: -$bg-grid-width;
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .footer {
+    height: $bg-grid-size-desktop * 7;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .text-container {
+    width: $bg-grid-size-desktop * 8;
+    height: 100%;
+    background: $color-2;
+    background-image: url('/img/bg-vintage-transparent.webp');
+    background-size: auto;
+    position: relative;
+    @include grid-after-border;
+  }
+  .bone {
+    width: 100.208%;
+    right: -7%;
+    &::before {
+      padding-top: (992 / 962) * 100%;
+    }
+  }
+  .links-container {
+    width: $bg-grid-size-desktop * 7;
+    height: 100%;
+    padding-top: $bg-grid-size-desktop * 6;
+    position: relative;
+  }
+  .button-opensea {
+    top: 0;
+    left: $bg-grid-size-desktop * 2;
+  }
+  .button-discord {
+    top: $bg-grid-size-desktop * 3;
+    left: $bg-grid-size-desktop * 2;
+    background: $color-4;
+    color: $color-2;
+  }
+  .button-law {
+    top: $bg-grid-size-desktop * 2;
+    left: $bg-grid-size-desktop * 1;
+  }
+  .button-twitter {
+    top: 0;
+    left: $bg-grid-size-desktop * 5;
+  }
+  .button-book {
+    top: $bg-grid-size-desktop;
+    left: 0;
+  }
+  .button-youniq {
+    top: $bg-grid-size-desktop * 2;
+    left: $bg-grid-size-desktop * 4;
+  }
+  .link {
+    span {
+      max-width: 70rem;
+    }
+  }
+  .link-privacy {
+    left: 0;
+    top: $bg-grid-size-desktop * 4;
+  }
+  .link-terms {
+    left: $bg-grid-size-desktop;
+    top: $bg-grid-size-desktop * 4;
+  }
+
+  .copyrights {
+    width: $bg-grid-size-desktop * 6;
+    height: $bg-grid-size-desktop;
+
+    p {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

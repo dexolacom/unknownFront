@@ -1,0 +1,94 @@
+.freemint {
+  margin-bottom: calc($bg-grid-size-var * -1.5);
+  min-height: calc($bg-grid-size-var * 20.5);
+  position: relative;
+}
+.button-disconnect {
+  margin: 0 auto;
+  width: $bg-grid-size-mobile * 3;
+  height: $bg-grid-size-var;
+  padding: 4px;
+}
+.socials {
+  margin: 0 auto $bg-grid-size-var;
+  width: min-content;
+}
+
+.bone {
+  margin-top: calc($bg-grid-size-var * -0.4);
+  width: calc($bg-grid-size-var * 4);
+  aspect-ratio: 1558 / 2146;
+  position: relative;
+}
+.window-mint-process {
+  margin-top: -5px;
+  padding: 5px 5px 10px;
+  height: $bg-grid-size-mobile * 8;
+}
+.bg {
+  img {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+@media (min-width: $breakpoint-md) {
+  .freemint {
+    margin-bottom: calc($bg-grid-size-var * -1);
+    min-height: $bg-grid-size-tablet * 18;
+  }
+  .button-disconnect {
+    margin-left: $bg-grid-size-var;
+    margin-bottom: $bg-grid-size-tablet * 1.3;
+    width: calc($bg-grid-size-var * 2);
+    padding: 10rem;
+  }
+  .socials {
+    position: absolute;
+    top: calc($bg-grid-size-var * 2);
+    right: 0;
+  }
+  .bone {
+    margin-top: 0;
+    width: $bg-grid-size-tablet * 4.9;
+  }
+  .window-mint-process {
+    margin: -$bg-grid-size-tablet auto 0;
+    max-width: $bg-grid-size-tablet * 4;
+    height: $bg-grid-size-tablet * 6;
+    padding: 0 10rem 15rem;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .freemint {
+    margin-bottom: calc($bg-grid-size-var * -3);
+    min-height: $bg-grid-size-desktop * 13;
+  }
+  .button-disconnect {
+    margin-bottom: 0;
+    padding: 15rem;
+  }
+  .socials {
+    position: absolute;
+    top: $bg-grid-size-desktop;
+    right: 0;
+  }
+  .bone {
+    margin-top: 0;
+    margin-left: $bg-grid-size-desktop * 3.8;
+    width: $bg-grid-size-desktop * 6.05;
+    position: absolute;
+    top: $bg-grid-size-desktop * 9;
+    transform: translateY(-100%);
+  }
+  .window-mint-process {
+    margin: 0;
+    width: $bg-grid-size-desktop * 5;
+    height: $bg-grid-size-desktop * 6;
+    padding: 15rem;
+    position: absolute;
+    top: $bg-grid-size-desktop;
+    right: $bg-grid-size-desktop * 1;
+  }
+}

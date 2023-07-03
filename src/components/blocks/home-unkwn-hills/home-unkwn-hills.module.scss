@@ -1,0 +1,250 @@
+.section {
+  height: $bg-grid-size-mobile * 23;
+  position: relative;
+}
+.content {
+  width: $bg-grid-size-mobile * 3;
+  height: $bg-grid-size-mobile * 15;
+  padding: 35px 25px 70px;
+  position: absolute;
+  top: $bg-grid-size-mobile * 2;
+  left: $bg-grid-size-mobile * 1;
+  z-index: 1;
+}
+.hat {
+  margin-bottom: 50px;
+  border-top: 3px solid $color-1;
+  padding-top: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 25px;
+}
+.text {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 133%;
+  /* identical to box height, or 20px */
+
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  /* 1 */
+
+  color: $color-1;
+}
+.right-text {
+  margin-left: auto;
+  max-width: 125px;
+  text-align: right;
+}
+.header {
+  margin-bottom: 90px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid $color-4;
+}
+.title {
+  margin-bottom: 15px;
+
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 84%;
+  /* or 92px */
+
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
+  /* 4 */
+
+  color: $color-4;
+}
+.subtitle {
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 133%;
+  /* or 25px */
+
+  letter-spacing: -0.009em;
+  text-transform: uppercase;
+
+  /* 4 */
+
+  color: $color-4;
+}
+.advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.advantage {
+  width: 100%;
+  text-align: center;
+}
+.advantage-icon {
+  margin: 0 auto 30px;
+  display: block;
+}
+.icon-cross-eyed {
+  width: 34px;
+}
+.icon-light {
+  width: 23px;
+}
+.icon-cross {
+  display: none;
+}
+.bg-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+.golfstick {
+  width: 65.33333%;
+
+  position: absolute;
+  bottom: 21%;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  &::before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: (334 / 245) * 100%;
+  }
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include bg-grid;
+  }
+}
+@media (min-width: $breakpoint-md) {
+  .section {
+    height: $bg-grid-size-tablet * 14;
+  }
+  .content {
+    width: $bg-grid-size-tablet * 4;
+    height: $bg-grid-size-tablet * 6;
+    padding: 20px 25px 60px;
+
+    top: $bg-grid-size-tablet * 2;
+    left: $bg-grid-size-tablet * 1;
+  }
+  .hat {
+    margin-bottom: 70rem;
+
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20rem;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .right-text {
+    margin-left: 0;
+    max-width: 130px;
+    text-align: left;
+  }
+  .header {
+    margin-bottom: 70px;
+    padding-bottom: 25px;
+  }
+  .title {
+    font-size: 69rem;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .advantages {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .advantage-icon {
+    margin-bottom: 40rem;
+  }
+  .icon-cross-eyed {
+    width: 40rem;
+  }
+  .icon-light {
+    width: 24rem;
+  }
+  .icon-cross {
+    display: block;
+    margin-top: 18px;
+    width: 32px;
+    flex-shrink: 0;
+    transform: translateY(-50%);
+  }
+  .golfstick {
+    width: 66.406%;
+    bottom: 29%;
+    &::before {
+      padding-top: (490 / 510) * 100%;
+    }
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .section {
+    height: $bg-grid-size-desktop * 16;
+  }
+  .content {
+    width: $bg-grid-size-desktop * 7;
+    height: $bg-grid-size-desktop * 7;
+    padding: 17rem 17rem 60rem;
+
+    top: $bg-grid-size-desktop * 2;
+    left: $bg-grid-size-desktop * 4;
+  }
+  .hat {
+    margin-bottom: 65rem;
+  }
+  .text {
+    font-size: 15rem;
+  }
+  .right-text {
+    max-width: 131rem;
+  }
+  .header {
+    margin-bottom: 135rem;
+    padding-bottom: 5px;
+  }
+  .title {
+    margin-bottom: 30rem;
+
+    font-size: 110rem;
+  }
+  .subtitle {
+    font-size: 19rem;
+  }
+  .golfstick {
+    width: 40%;
+    &::before {
+      padding-top: (849 / 768) * 100%;
+    }
+  }
+}

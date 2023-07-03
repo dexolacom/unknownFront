@@ -1,0 +1,91 @@
+.shutter {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: $bg-grid-size-var;
+  //   gap: $bg-grid-width;
+  overflow: hidden;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  &::after {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: $bg-grid-size-var $bg-grid-size-var;
+    background-repeat: repeat;
+    background-image: linear-gradient(
+        $bg-grid-color $bg-grid-width,
+        transparent $bg-grid-width
+      ),
+      linear-gradient(
+        90deg,
+        $bg-grid-color $bg-grid-width,
+        transparent $bg-grid-width
+      );
+  }
+}
+.cell {
+  width: 100%;
+  height: 100%;
+  background: $color-2;
+  background-size: auto;
+  background-image: url('/img/bg-vintage-transparent.webp');
+
+  $cols: 5;
+  $rows: 12;
+  @for $i from 1 through $cols {
+    @for $j from 1 through $rows {
+      &:nth-child(#{$i+($j - 1) * $cols}) {
+        background-position: calc(#{$i} * #{$bg-grid-size-var})
+          calc(#{$j} * #{$bg-grid-size-var});
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-md) {
+  .shutter {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .cell {
+    $cols: 6;
+    $rows: 14;
+    @for $i from 1 through $cols {
+      @for $j from 1 through $rows {
+        &:nth-child(#{$i+($j - 1) * $cols}) {
+          background-position: calc(#{$i} * #{$bg-grid-size-var})
+            calc(#{$j} * #{$bg-grid-size-var});
+        }
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-lg) {
+  .shutter {
+    grid-template-columns: repeat(15, 1fr);
+  }
+  .cell {
+    $cols: 15;
+    $rows: 10;
+    @for $i from 1 through $cols {
+      @for $j from 1 through $rows {
+        &:nth-child(#{$i+($j - 1) * $cols}) {
+          background-position: calc(#{$i} * #{$bg-grid-size-var})
+            calc(#{$j} * #{$bg-grid-size-var});
+        }
+      }
+    }
+  }
+}

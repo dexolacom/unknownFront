@@ -1,0 +1,81 @@
+.card {
+  height: $bg-grid-size-mobile * 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.title {
+  height: 100%;
+
+  font-family: 'Right Grotesk';
+  font-weight: 900;
+  font-size: 40px;
+
+  line-height: 90%;
+  /* or 45px */
+
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  display: grid;
+  place-content: center;
+}
+.icon {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+}
+.text {
+  height: 100%;
+  line-height: 112%;
+  /* or 18px */
+
+  text-align: center;
+  text-transform: uppercase;
+  display: grid;
+  place-content: center;
+}
+.arrow {
+  width: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.bg {
+  z-index: -1;
+  pointer-events: none;
+}
+@media (min-width: $breakpoint-md) {
+  .card {
+    width: 100%;
+    height: 100%;
+  }
+  .title {
+    font-size: 50rem;
+  }
+  .text {
+    font-size: 16rem;
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .card {
+    &:hover {
+      .icon {
+        transform: translate(-50%, -50%) rotateZ(405deg);
+      }
+      .arrow {
+        transform: translate(50%, -50%);
+      }
+    }
+  }
+}

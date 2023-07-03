@@ -1,0 +1,30 @@
+.socials {
+  width: min-content;
+  height: $bg-grid-size-var;
+  display: flex;
+  &.row {
+    flex-direction: row;
+    width: min-content;
+    height: $bg-grid-size-var;
+  }
+  &.column {
+    flex-direction: column;
+    width: $bg-grid-size-var;
+    height: min-content;
+  }
+}
+.button {
+  padding: 5px;
+}
+
+@media (min-width: $breakpoint-md) {
+  .button {
+    padding: 10rem;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .button {
+    padding: 15rem;
+  }
+}

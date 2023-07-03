@@ -1,0 +1,33 @@
+.button {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.33);
+  backdrop-filter: blur(7.5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  transition: $transition;
+
+  font-size: 14px;
+  line-height: 133%;
+  text-align: center;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+@media (min-width: $breakpoint-md) {
+  .button {
+    font-size: 16rem;
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .button {
+    &:hover,
+    &:focus {
+      background: rgba(0, 0, 0, 0.5);
+    }
+    &:active {
+      background: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
